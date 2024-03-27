@@ -47,7 +47,7 @@ public class RegexService {
         String searchedText2= "The number is 9 the NUMber is 29 The number is 39 The color is red";
         String searchedText3= "The nmber is 6 the NMber is 26 The nmber is 36 The color is yellow Second color is green";
         String searchedText4= "The nmber is 8 the NMber is 28 The nmber is 38 The color is black";
-        IntStream.range(0,10000).forEach(i-> {
+        IntStream.range(0,50000).forEach(i-> {
                     allPatterns.forEach(p -> matchers.add(p.matcher(searchedText1)));
                     allPatterns.forEach(p -> matchers.add(p.matcher(searchedText2)));
                     allPatterns.forEach(p -> matchers.add(p.matcher(searchedText3)));
