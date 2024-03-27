@@ -74,7 +74,7 @@ public class HyperscanPatternFilterService {
                 }
             }
         }
-        System.out.println(sb);
+        //System.out.println(sb);
         Instant t2 = Instant.now();
         System.out.println("\nDuration for HyperscanPatternFilter : " + (t2.toEpochMilli() - t1.toEpochMilli()));
     }

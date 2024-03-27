@@ -68,7 +68,7 @@ public class RegexService {
                 }
             }
         }
-        System.out.println(sb);
+        //System.out.println(sb);
         Instant t2 = Instant.now();
         System.out.println("\nDuration for Regex : " + (t2.toEpochMilli() - t1.toEpochMilli()));
     }
