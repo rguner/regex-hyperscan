@@ -33,7 +33,7 @@ import java.util.stream.IntStream;
 @Slf4j
 public class HyperscanDirectUsageService {
 
-    //@EventListener(ApplicationReadyEvent.class)
+    @EventListener(ApplicationReadyEvent.class)
     public void initialize() {
         try {
             patternFilter();
