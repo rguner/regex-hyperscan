@@ -21,7 +21,7 @@ import java.util.stream.IntStream;
 @Slf4j
 public class HyperscanPatternFilterSimpleService {
 
-    @EventListener(ApplicationReadyEvent.class)
+    //@EventListener(ApplicationReadyEvent.class)
     public void initialize() {
         try {
             patternFilter();
