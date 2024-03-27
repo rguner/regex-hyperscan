@@ -38,8 +38,11 @@ public class HyperscanPatternFilterService {
                 // and thousands more
         );
 
+        List<Pattern> allPatterns = new ArrayList<>();
+        IntStream.range(0,10).forEach(i -> allPatterns.addAll(patterns));
+
         //not thread-safe, create per thread
-        PatternFilter filter = new PatternFilter(patterns);
+        PatternFilter filter = new PatternFilter(allPatterns);
 
         Instant t1= Instant.now();
         List<Matcher> matchers = new ArrayList<>();

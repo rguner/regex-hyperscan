@@ -38,6 +38,9 @@ public class RegexService {
                 // and thousands more
         );
 
+        List<Pattern> allPatterns = new ArrayList<>();
+        IntStream.range(0,10).forEach(i -> allPatterns.addAll(patterns));
+
         Instant t1= Instant.now();
         List<Matcher> matchers = new ArrayList<>();
         String searchedText1= "The number is 7 the NUMber is 27 The number is 37 The color is blue";
@@ -45,10 +48,10 @@ public class RegexService {
         String searchedText3= "The nmber is 6 the NMber is 26 The nmber is 36 The color is yellow Second color is green";
         String searchedText4= "The nmber is 8 the NMber is 28 The nmber is 38 The color is black";
         IntStream.range(0,10000).forEach(i-> {
-                    patterns.forEach(p -> matchers.add(p.matcher(searchedText1)));
-                    patterns.forEach(p -> matchers.add(p.matcher(searchedText2)));
-                    patterns.forEach(p -> matchers.add(p.matcher(searchedText3)));
-                    patterns.forEach(p -> matchers.add(p.matcher(searchedText4)));
+                    allPatterns.forEach(p -> matchers.add(p.matcher(searchedText1)));
+                    allPatterns.forEach(p -> matchers.add(p.matcher(searchedText2)));
+                    allPatterns.forEach(p -> matchers.add(p.matcher(searchedText3)));
+                    allPatterns.forEach(p -> matchers.add(p.matcher(searchedText4)));
                 }
         );
 
